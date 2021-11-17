@@ -132,12 +132,12 @@
     border-radius: 20px 325px 0px 20px;
     background-color: $main-color-dark;
     @media (max-width: 1365px) {
-        padding: 50px 0px 50px 30px;
+        padding: 50px 0px 55px 30px;
         width: 464px;
     }
     @media (max-width: 767px) {
         align-items: center;
-        padding: 96px 8px 76px 8px;
+        padding: 96px 8px 81px 8px;
         width: 290px;
         border-radius: 20px 145px 145px 0px;
     }
@@ -150,7 +150,8 @@
     color: $city-text;
     opacity: 0.75;
     @media (max-width: 1365px) {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
+        font-size: 14px;
     }
     @media (max-width: 767px) {
         text-align: center;
