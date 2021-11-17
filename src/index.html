@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кондитерская Honey Bakery</title>
+    <meta name="keywords" content="Торт, Торты на заказ, Кондитерская, Шоколад ручной работы, Подарок на праздник, Торт к столу, Дизайн торта, Заказать торт, Домашняя выпечка, Callebaut, Шоколад, Медовик на заказ, Медовик, Вилюр, Без мастики, Кондитерская Гродно, Торты на заказ Гродно ">
+    <meta name="description" content="Торты на заказ, по самым приемлемым ценам. Лучший дизайн и вкус в г.Гродно!">
+</head>
+
+<body>
+    <!-- SPRITE SVG -->
+
+    <div style="display:none">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <symbol id="btn-arrow" viewBox="0 0 6 16">
+                <path d="M1.1417 0L0 1.06417L3.7085 8.0013L0 14.9384L1.1417 16L6 8.0013L1.1417 0Z" fill="#333333"/>
+                </symbol>
+                >
+            <symbol id="burger" viewBox="0 0 17 12">
+                <path d="M7.25806 12H16.6667V10H7.25806V12ZM0 7H16.6667V5H0V7ZM3.76344 0V2H16.6667V0H3.76344Z" fill="#1F1F1F"/>
+            </symbol>
+            <symbol  id="cross" viewBox="0 0 10 10">
+                <path d="M10 1.00714L8.99286 0L5 3.99286L1.00714 0L0 1.00714L3.99286 5L0 8.99286L1.00714 10L5 6.00714L8.99286 10L10 8.99286L6.00714 5L10 1.00714Z" fill="#1F1F1F"/>
+            </symbol>
+                      
+        </svg>
+    </div>
+
+
+    <!-- HEADER -->
+
+    <section class="header container">
+        <div class="header__navigation">
+            <a class="header__logotype" href="#" aria-label="Логотип/Ссылка на главную страницу">
+                <img src="img/logo/logo.png" alt="Логотип с изображением пчелы и пчелиных сот" class="header__logotype-img" height="50" width="50">
+                <img src="img/logo/LogoText.png" alt="Название компании Honey Bakery" class="header__logotype-text" height="20" width="136.22">
+            </a>
+            <div class="header__menu-btn-wrapper header__block--hidden">
+                <button class="header__menu-controller" type="button" aria-label="Кнопка открыть/закрыть меню">
+                    <span class="header__burger">
+                        <svg class="header__burger-svg"  width="17" height="12">
+                            <use xlink:href="#burger"></use> 
+                        </svg>
+                    </span>
+                    <span class="header__cross header__block--hidden">
+                        <svg class="header__cross-svg"  width="10" height="10">
+                            <use xlink:href="#cross"></use> 
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            <ul class="header__menu">
+                <li class="header__menu-item"><a class="header__menu-link header__menu-link--active" href="#">Главная</a></li>
+                <li class="header__menu-item"><a class="header__menu-link" href="#">Каталог</a></li>
+                <li class="header__menu-item"><a class="header__menu-link" href="#">Контакты</a></li>
+                <li class="header__menu-item"><a class="header__menu-link" href="#">О нас</a></li>
+            </ul>
+        </div>
+        <div class="header__content-wrapper shadow">
+            <div class="header__text-content">
+                <p class="header__city subtitle">№1 В городе Гродно</p>
+                <h1 class="header__title title"><span class="header__brand-text">Honey Bakery</span> - Ваш путеводитель в мир сладкого!</h1>
+                <a class="header__button button" href="#">Сделать заказ</a>
+            </div>
+            <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/cake/cake-mobile@1x.webp 1x, img/cake/cake-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1365px)" srcset="img/cake/cake-tablet@1x.webp 1x, img/cake/cake-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/cake/cake-desktop@1x.webp 1x, img/cake/cake-desktop@2x.webp 2x">
+
+                <source media="(max-width: 767px)" srcset="img/cake/cake-mobile@1x.png 1x, img/cake/cake-mobile@2x.png 2x">
+                <source media="(max-width: 1365px)" srcset="img/cake/cake-tablet@1x.png 1x, img/cake/cake-tablet@2x.png 2x">
+                <img class="header__cake-img" src="img/cake/cake-desktop@1x.png" srcset="img/cake/cake-desktop@2x.png 2x" alt="Медовик в разрезе с пчелой на подносе" height="485" width="650">
+            </picture>
+            <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/bee/bee-mobile@1x.webp 1x, img/bee/bee-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1365px)" srcset="img/bee/bee-tablet@1x.webp 1x, img/bee/bee-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/bee/bee-desktop@1x.webp 1x, img/bee/bee-desktop@2x.webp 2x">
+
+                <source media="(max-width: 767px)" srcset="img/bee/bee-mobile@1x.png 1x, img/bee/bee-mobile@2x.png 2x">
+                <source media="(max-width: 1365px)" srcset="img/bee/bee-tablet@1x.png 1x, img/bee/bee-tablet@2x.png 2x">
+                <img class="header__bee-img" src="img/bee/bee-desktop@1x.png" srcset="img/bee/bee-desktop@2x.png 2x" alt="Пчела, летящая на медовик" height="41.32" width="42.6">
+            </picture>
+        </div>
+        <div class="header__horizontal-line horizontal-line"></div>
+    </section>
+
+
+    <!-- SPECIALS -->
+
+    <section class="specials container">
+        <div class="specials__content-wrapper">
+            <div class="specials__text-content">
+                <p class="specials__subtitle subtitle">Рекомендуемые</p>
+                <h2 class="specials__title title">Специальные предложения</h2>
+                <a class="specials__button" href="#">Смотреть все
+                    <span class="specials__button-arrow">
+                        <svg class="specials__button-arrow-svg" width="6" height="13">
+                            <use xlink:href="#btn-arrow"></use>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+            <div class="specials__slider">
+                <ul class="specials__slider-list">
+                    <li class="specials__slider-item specials__slider-item--active shadow ">
+                        <a class="specials__slider-link" href="#" aria-label="Переход на страницу с большим выбором шоколадок">
+                            <div class="specials__slider-img specials__slider-img--first">
+                                <picture>
+                                    <source type="image/webp" media="(max-width: 767px)" srcset="img/cake-slider/chocolate-main/choco-mobile@1x.webp 1x, img/cake-slider/chocolate-main/choco-mobile@2x.webp 2x">
+                                    <source type="image/webp" media="(max-width: 1365px)" srcset="img/cake-slider/chocolate-main/choco-tablet@1x.webp 1x, img/cake-slider/chocolate-main/choco-tablet@2x.webp 2x">
+                                    <source type="image/webp" srcset="img/cake-slider/chocolate-main/choco-desktop@1x.webp 1x, img/cake-slider/chocolate-main/choco-desktop@2x.webp 2x">
+
+                                    <source media="(max-width: 767px)" srcset="img/cake-slider/chocolate-main/choco-mobile@1x.png 1x, img/cake-slider/chocolate-main/choco-mobile@2x.png 2x">
+                                    <source media="(max-width: 1365px)" srcset="img/cake-slider/chocolate-main/choco-tablet@1x.png 1x, img/cake-slider/chocolate-main/choco-tablet@2x.png 2x">
+                                    <img class="specials__choco-img" src="img/cake-slider/chocolate-main/choco-desktop@1x.png" srcset="img/cake-slider/chocolate-main/choco-desktop@2x.png 2x" alt="Три шоколадки ручной работы с перчаткой" height="186" width="228">
+                                </picture>
+                            </div>
+                            <span class="specials__slider-horizontal-line horizontal-line"></span>
+                            <p class="specials__slider-description">Шоколад ручной работы “Callebaut”</p>
+                        </a>
+                    </li>
+                    <li class="specials__slider-item shadow">
+                        <a class="specials__slider-link" href="#" aria-label="Переход на страницу с тематическими тортами">
+                            <div class="specials__slider-img specials__slider-img--second">
+                                <picture>
+                                    <source type="image/webp" media="(max-width: 767px)" srcset="img/cake-slider/first_cake-main/first_cake-mobile@1x.webp 1x, img/cake-slider/first_cake-main/first_cake-mobile@2x.webp 2x">
+                                    <source type="image/webp" media="(max-width: 1365px)" srcset="img/cake-slider/first_cake-main/first_cake-tablet@1x.webp 1x, img/cake-slider/first_cake-main/first_cake-tablet@2x.webp 2x">
+                                    <source type="image/webp" srcset="img/cake-slider/first_cake-main/first_cake-desktop@1x.webp 1x, img/cake-slider/first_cake-main/first_cake-desktop@2x.webp 2x">
+
+                                    <source media="(max-width: 767px)" srcset="img/cake-slider/first_cake-main/first_cake-mobile@1x.png 1x, img/cake-slider/first_cake-main/first_cake-mobile@2x.png 2x">
+                                    <source media="(max-width: 1365px)" srcset="img/cake-slider/first_cake-main/first_cake-tablet@1x.png 1x, img/cake-slider/first_cake-main/first_cake-tablet@2x.png 2x">
+                                    <img class="specials__first-cake-img" src="img/cake-slider/first_cake-main/first_cake-desktop@1x.png" srcset="img/cake-slider/first_cake-main/first_cake-desktop@2x.png 2x" alt="Градиентовый розовый торт с шариками на верхушке" height="259" width="144">
+                                </picture>
+                            </div>
+                            <span class="specials__slider-horizontal-line horizontal-line"></span>
+                            <p class="specials__slider-description">Торты с праздничной тематикой</p>
+                        </a>
+                    </li>
+                    <li class="specials__slider-item shadow">
+                        <a class="specials__slider-link" href="#" aria-label="Переход на страницу с уникальными дизайнами тортов">
+                            <div class="specials__slider-img specials__slider-img--third">
+                                <picture>
+                                    <source type="image/webp" media="(max-width: 767px)" srcset="img/cake-slider/second_cake-main/second_cake-mobile@1x.webp 1x, img/cake-slider/second_cake-main/second_cake-mobile@2x.webp 2x">
+                                    <source type="image/webp" media="(max-width: 1365px)" srcset="img/cake-slider/second_cake-main/second_cake-tablet@1x.webp 1x, img/cake-slider/second_cake-main/second_cake-tablet@2x.webp 2x">
+                                    <source type="image/webp" srcset="img/cake-slider/second_cake-main/second_cake-desktop@1x.webp 1x, img/cake-slider/second_cake-main/second_cake-desktop@2x.webp 2x">
+
+                                    <source media="(max-width: 767px)" srcset="img/cake-slider/second_cake-main/second_cake-mobile@1x.png 1x, img/cake-slider/second_cake-main/second_cake-mobile@2x.png 2x">
+                                    <source media="(max-width: 1365px)" srcset="img/cake-slider/second_cake-main/second_cake-tablet@1x.png 1x, img/cake-slider/second_cake-main/second_cake-tablet@2x.png 2x">
+                                    <img class="specials__second-cake-img" src="img/cake-slider/second_cake-main/second_cake-desktop@1x.png" srcset="img/cake-slider/second_cake-main/second_cake-desktop@2x.png 2x" alt="Три шоколадки ручной работы с перчаткой" height="272" width="128">
+                                </picture>
+                            </div>
+                            <span class="specials__slider-horizontal-line horizontal-line"></span>
+                            <p class="specials__slider-description">Торты с уникальным дизайном</p>
+                        </a>
+                    </li>
+                </ul>
+                <button class="specials__arrow specials__arrow--left button__arrow button__arrow--left"></button>
+                <button class="specials__arrow specials__arrow--right button__arrow button__arrow--right"></button>
+            </div>
+        </div>
+        <div class="specials__horizontal-line horizontal-line"></div>
+    </section>
+
+
+    <!-- FEATURES -->
+
+    <section class="features container">
+        <div class="features__content-wrapper">
+            <div class="features__text-content">
+                <p class="features__subtitle subtitle">Факты</p>
+                <h2 class="features__title title">Почему среди всех кондитеров выбирают нас?</h2>
+            </div>
+            <ul class="features__list">
+                <li class="features__item">
+                    <div class="features__img-block">
+                        <picture>
+                            <source type="image/webp" media="(max-width: 1365px)" srcset="img/features/flour-main/flour-tablet@1x.webp 1x, img/features/flour-main/flour-tablet@2x.webp 2x">
+                            <source type="image/webp" srcset="img/features/flour-main/flour-desktop@1x.webp 1x, img/features/flour-main/flour-desktop@2x.webp 2x">
+
+                            <source media="(max-width: 1365px)" srcset="img/features/flour-main/flour-tablet@1x.png 1x, img/features/flour-main/flour-tablet@2x.png 2x">
+                            <img class="features__img features__img-flour shadow__circle" src="img/features/flour-main/flour-desktop@1x.png" srcset="img/features/flour-main/flour-desktop@2x.png 2x" alt="Рассыпанная мука на столе" height="120" width="120">
+                        </picture>
+                    </div>
+                    <h3 class="features__item-title title">Мука высшего качества</h3>
+                    <p class="features__item-description">Для выпекания тортов используется пшеничная, миндальная, а так же безглютеновая рисовая мука высшего сорта.</p>
+                </li>
+                <li class="features__item">
+                    <div class="features__img-block">
+                        <picture>
+                            <source type="image/webp" media="(max-width: 1365px)" srcset="img/features/honey-main/honey-tablet@1x.webp 1x, img/features/honey-main/honey-tablet@2x.webp 2x">
+                            <source type="image/webp" srcset="img/features/honey-main/honey-desktop@1x.webp 1x, img/features/honey-main/honey-desktop@2x.webp 2x">
+
+                            <source media="(max-width: 1365px)" srcset="img/features/honey-main/honey-tablet@1x.png 1x, img/features/honey-main/honey-tablet@2x.png 2x">
+                            <img class="features__img features__img-honey shadow__circle" src="img/features/honey-main/honey-desktop@1x.png" srcset="img/features/honey-main/honey-desktop@2x.png 2x" alt="Кусочек сотов с медом на белом столе" height="120" width="120">
+                        </picture>
+                    </div>
+                    <h3 class="features__item-title title">Мёд прямиком с пасеки</h3>
+                    <p class="features__item-description">При выпекании медовиков используется только натуральный мёд, который придает тонкий и неповторимый вкус.</p>
+                </li>
+                <li class="features__item">
+                    <div class="features__img-block">
+                        <picture>
+                            <source type="image/webp" media="(max-width: 1365px)" srcset="img/features/milk-main/milk-tablet@1x.webp 1x, img/features/milk-main/milk-tablet@2x.webp 2x">
+                            <source type="image/webp" srcset="img/features/milk-main/milk-desktop@1x.webp 1x, img/features/milk-main/milk-desktop@2x.webp 2x">
+
+                            <source media="(max-width: 1365px)" srcset="img/features/milk-main/milk-tablet@1x.png 1x, img/features/milk-main/milk-tablet@2x.png 2x">
+                            <img class="features__img features__img-butter shadow__circle" src="img/features/milk-main/milk-desktop@1x.png" srcset="img/features/milk-main/milk-desktop@2x.png 2x" alt="Бидоны фермерского масла" height="120" width="120">
+                        </picture>
+                    </div>
+                    <h3 class="features__item-title title">Качественное масло</h3>
+                    <p class="features__item-description">Масло - основной продукт для создания шедевра кулинарии. Для своих произведений мы берем масло не менее 82,5% жирности.</p>
+                </li>
+                <li class="features__item">
+                    <div class="features__img-block">
+                        <picture>
+                            <source type="image/webp" media="(max-width: 1365px)" srcset="img/features/berries-main/berries-tablet@1x.webp 1x, img/features/berries-main/berries-tablet@2x.webp 2x">
+                            <source type="image/webp" srcset="img/features/berries-main/berries-desktop@1x.webp 1x, img/features/berries-main/berries-desktop@2x.webp 2x">
+
+                            <source media="(max-width: 1365px)" srcset="img/features/berries-main/berries-tablet@1x.png 1x, img/features/berries-main/berries-tablet@2x.png 2x">
+                            <img class="features__img features__img-berries shadow__circle" src="img/features/berries-main/berries-desktop@1x.png" srcset="img/features/berries-main/berries-desktop@2x.png 2x" alt="Лесные ягоды" height="120" width="120">
+                        </picture>
+                    </div>
+                    <h3 class="features__item-title title">Отборные ягоды и фрукты</h3>
+                    <p class="features__item-description description">Мы не используем покупные джемы и варенья для начинок. Так как в них используются вредные вещества, что портят впечатления от торта.</p>
+                </li>
+                </li>
+            </ul>
+            <!-- стили special__button-arrow -->
+            <a class="features__button button" href="#">Подробнее
+                <span class="features__button-arrow">
+                    <svg class="features__button-arrow-svg" width="6" height="13">
+                        <use xlink:href="#btn-arrow"></use>
+                    </svg>
+                </span>
+            </a>
+        </div>
+        <div class="features__horizontal-line horizontal-line"></div>
+
+    </section>
+
+    <!-- ANSWERS -->
+    <section class="answers container">
+        <div class="answers__text-content">
+            <p class="answers__subtitle subtitle">Вопрос-ответ</p>
+            <h2 class="answers__title title">Ответы на самые популярные вопросы</h2>
+        </div>
+        <ol class="answers__list">
+            <li class="answers__item answers__item--active">
+                <button class="answers__question answers__question-text" type="button" aria-label="Посмотреть ответ 1">Из каких критериев складывается цена заказа?
+                <span class="answers__button"></span>
+            </button>
+                <div class="answers__answer">
+                    <div class="answers__answer-wrap">
+                        <p></p>
+                        <p></p>
+                    </div>
+                </div>
+            </li>
+            <li class="answers__item">
+                <button class="answers__question answers__question-text" type="button" aria-label="Посмотреть ответ 2">Как обстоят дела с доставкой?
+                <span class="answers__button"></span>
+            </button>
+                <div class="answers__answer">
+                    <div class="answers__answer-wrap">
+                        <p></p>
+                        <p></p>
+                    </div>
+                </div>
+            </li>
+            <li class="answers__item">
+                <button class="answers__question answers__question-text" type="button" aria-label="Посмотреть ответ 3">За сколько дней делать заказ?
+                <span class="answers__button"></span>
+            </button>
+                <div class="answers__answer">
+                    <div class="answers__answer-wrap">
+                        <p></p>
+                        <p></p>
+                    </div>
+                </div>
+            </li>
+            <li class="answers__item">
+                <button class="answers__question answers__question-text" type="button" aria-label="Посмотреть ответ 4">Почему мы работаем по предоплате?
+                <span class="answers__button"></span>
+            </button>
+                <div class="answers__answer">
+                    <div class="answers__answer-wrap">
+                        <p></p>
+                        <p></p>
+                    </div>
+                </div>
+            </li>
+        </ol>
+        <a class="answers__button button" href="#">Задать вопрос
+            <span class="answers__button-arrow">
+                <svg class="answers__button-arrow-svg" width="6" height="13">
+                    <use xlink:href="#btn-arrow"></use>
+                </svg>
+            </span>
+        </a>
+        <div class="features__horizontal-line horizontal-line"></div>
+    </section>
+
+
+    <!-- FEEDBACK -->
+
+    <section class="feedback container">
+        <h2 class="feedback__title title">Отзывы</h2>
+        <div class="feedback__block">
+            <div class="feedback__photo-wrapper">
+                <div class="feedback__photo-inner">
+                    <picture>
+                        <source type="image/webp" media="(max-width: 767px)" srcset="img/reviews/second-girl/second-girl-mobile@1x.webp 1x, img/reviews/second-girl/second-girl-mobile@2x.webp 2x">
+                        <source type="image/webp" media="(max-width: 1365px)" srcset="img/reviews/second-girl/second-girl-tablet@1x.webp 1x, img/reviews/second-girl/second-girl-tablet@2x.webp 2x">
+                        <source type="image/webp" srcset="img/reviews/second-girl/second-girl-desktop@1x.webp 1x, img/reviews/second-girl/second-girl-desktop@2x.webp 2x">
+
+                        <source media="(max-width: 767px)" srcset="img/reviews/second-girl/second-girl-mobile@1x.png 1x, img/reviews/second-girl/second-girl-mobile@2x.png 2x">
+                        <source media="(max-width: 1365px)" srcset="img/reviews/second-girl/second-girl-tablet@1x.png 1x, img/reviews/second-girl/second-girl-tablet@2x.png 2x">
+                        <img class="feedback__photo" src="img/reviews/second-girl/second-girl-desktop@1x.png" srcset="img/reviews/second-girl/second-girl-desktop@2x.png 2x" alt="Фото Матильды Романовой" width="280" height="280">
+                    </picture>
+                    <picture>
+                        <source type="image/webp" media="(max-width: 767px)" srcset="img/reviews/men/men-mobile@1x.webp 1x, img/reviews/men/men-mobile@2x.webp 2x">
+                        <source type="image/webp" media="(max-width: 1365px)" srcset="img/reviews/men/men-tablet@1x.webp 1x, img/reviews/men/men-tablet@2x.webp 2x">
+                        <source type="image/webp" srcset="img/reviews/men/men-desktop@1x.webp 1x, img/reviews/men/men-desktop@2x.webp 2x">
+
+                        <source media="(max-width: 767px)" srcset="img/reviews/men/men-mobile@1x.png 1x, img/reviews/men/men-mobile@2x.png 2x">
+                        <source media="(max-width: 1365px)" srcset="img/reviews/men/men-tablet@1x.png 1x, img/reviews/men/men-tablet@2x.png 2x">
+                        <img class="feedback__photo" src="img/reviews/men/men-desktop@1x.png" srcset="img/reviews/men/men-desktop@2x.png 2x" alt="Фото Льва Кирпичева" width="280" height="280">
+                    </picture>
+                    <picture>
+                        <source type="image/webp" media="(max-width: 767px)" srcset="img/reviews/first-girl/girl-mobile@1x.webp 1x, img/reviews/first-girl/girl-mobile@2x.webp 2x">
+                        <source type="image/webp" media="(max-width: 1365px)" srcset="img/reviews/first-girl/girl-tablet@1x.webp 1x, img/reviews/first-girl/girl-tablet@2x.webp 2x">
+                        <source type="image/webp" srcset="img/reviews/first-girl/girl-desktop@1x.webp 1x, img/reviews/first-girl/girl-desktop@2x.webp 2x">
+
+                        <source media="(max-width: 767px)" srcset="img/reviews/first-girl/girl-mobile@1x.png 1x, img/reviews/first-girl/girl-mobile@2x.png 2x">
+                        <source media="(max-width: 1365px)" srcset="img/reviews/first-girl/girl-tablet@1x.png 1x, img/reviews/first-girl/girl-tablet@2x.png 2x">
+                        <img class="feedback__photo" src="img/reviews/first-girl/girl-desktop@1x.png" srcset="img/reviews/first-girl/girl-desktop@2x.png 2x" alt="Фото Анастасии Грачевой" width="280" height="280">
+                    </picture>
+                </div>
+            </div>
+            <div class="feedback__block-content feedback__block-content--active">
+                <h3 class="feedback__name">Матильда Романова</h3>
+                <p class="feedback__describe">Заказывала медовик и три шоколадки. Заказ пришел вовремя, всё было очень вкусным и невероятно красивым. Буду заказывать на каждый праздник только у Вас!</p>
+                <div class="feedback__down">
+                    <div class="feedback__horizontal-line horizontal-line"></div>
+                    <ul class="feedback__social">
+                        <li class="feedback__social-item">
+                            <a class="feedback__item-decorated" href="#" aria-label="Мы в Вконтакте"></a>
+                        </li>
+                        <li class="feedback__social-item">
+                            <a class="feedback__item-decorated" href="#" aria-label="Мы в Телеграм"></a>
+                        </li>
+                        <li class="feedback__social-item">
+                            <a class="feedback__item-decorated" href="#" aria-label="Мы в Инстаграм"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__wrapper">
+
+        </div>
+    </footer>
+
+
+    <div class="overlay"></div>
+</body>
+
+</html>

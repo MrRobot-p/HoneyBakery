@@ -1,0 +1,52 @@
+.button {
+    width: 230px;
+    padding: 17.5px 0;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $text-color;
+    background: $main-color-light;
+    box-shadow: 18px 18px 20px $gray, -18px -18px 20px $white;
+    border-radius: 20px;
+    @media (max-width: 1365px) {
+        width: 184px;
+        padding: 12px 0;
+        font-size: 12px;
+        line-height: 14px;
+    }
+}
+
+.button__arrow {
+    width: 6px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.3s;
+    opacity: 0.5;
+}
+
+.button__arrow:hover,
+.button__arrow:focus {
+    opacity: 1;
+    outline: none;
+}
+
+.button__arrow:active {
+    opacity: 0.7;
+}
+
+.button__arrow--left {
+    background-image: url(../img/icons/arrow.svg);
+    transform: scaleX(-1);
+}
+
+.button__arrow--right {
+    background-image: url(../img/icons/arrow.svg);
+}

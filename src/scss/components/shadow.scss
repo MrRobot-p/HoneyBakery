@@ -1,0 +1,14 @@
+.shadow {
+    box-shadow: 36px 36px 30px $gray, -36px -36px 30px $white;
+    @media (max-width: 1365px) {
+        box-shadow: 18px 18px 20px $gray, -18px -18px 20px $white;
+    }
+    @media (max-width: 767px) {
+        box-shadow: 9px 9px 15px $gray, -18px -18px 20px $white;
+    }
+}
+
+.shadow__circle {
+    box-shadow: 20px 20px 30px #BAB8B8, -20px -20px 30px #FFFFFF;
+    border-radius: 1000px;
+}

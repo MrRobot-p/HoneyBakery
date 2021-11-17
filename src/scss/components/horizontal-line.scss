@@ -1,0 +1,11 @@
+.horizontal-line {
+    width: 980px;
+    border: 1px solid #000000;
+    opacity: 0.3;
+    @media (max-width: 1365px) {
+        width: 540px;
+    }
+    @media (max-width:767px) {
+        width: 220px;
+    }
+}
