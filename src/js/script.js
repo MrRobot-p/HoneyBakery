@@ -32,7 +32,6 @@ const adjustDesktopAndTablet = () => {
         specialsBtn.classList.remove('button');
     }
     menuItems.forEach(item => item.classList.remove('button'));
-    // sliderDestroy();
 };
 
 const adjustMobile = () => {
@@ -61,7 +60,6 @@ const adjustMobile = () => {
     }
 
     menuItems.forEach(item => item.classList.add('button'));
-    // sliderInit();
 }
 
 const checkWindowWidth = () => {
@@ -124,40 +122,13 @@ menuBtn.addEventListener('click', () => {
     }
 });
 
-// function sliderInit() {
-//     container.classList.add('swiper');
-//     wrapper.classList.add('swiper-wrapper');
-//     slides.forEach((slide) => {
-//         slide.classList.add('swiper-slide');
-//     });
-
-//     slider = new Swiper(container, {
-//         width: 284,
-//         spaceBetween: 20,
-//         loop: true,
-//         slidesPerView: 1,
-//         observer: true,
-//         observeParents: true,
-//         navigation: {
-//             nextEl: '.specials__arrow--right',
-//             prevEl: '.specials__arrow--left',
-//             disabledClass: 'disabled',
-//         },
-//     });
-// }
-
-// function sliderDestroy() {
-//     slider.destroy();
-//     container.classList.remove('swiper');
-//     wrapper.classList.remove('swiper-wrapper');
-//     slides.forEach((slide) => {
-//         slide.classList.remove('swiper-slide');
-//     });
-// }
-
-// СЛАЙДЕРЫЫЫЫЫ
-
-
+overlay.addEventListener('click', () => {
+    if (menuBtn.classList.contains(headerOpenedClass)) {
+        closeMenu();
+    } else {
+        openMenu();
+    }
+});
 
 class RecomendationSlider {
     constructor(sliderContent, btnPrev, btnNext, activeClass) {
@@ -170,7 +141,7 @@ class RecomendationSlider {
         this.index = 0;
     }
 
-    slider() {
+    recomendSlider() {
         this.sliderContent[this.index].classList.add(this.activeClass);
 
         this.btnNext.addEventListener('click', () => {
@@ -207,4 +178,86 @@ new RecomendationSlider(
         '.specials__arrow--left',
         '.specials__arrow--right',
         'specials__slider-item--active')
+    .recomendSlider()
+
+
+// АККОРДИОН
+
+document.querySelectorAll('.answers__item').forEach(item => {
+    item.addEventListener('click', function() {
+        this.classList.toggle('active');
+    });
+});
+
+
+class Slider {
+    constructor(photoInner, photoWrapper, sliderContent, btnPrev, btnNext, activeClass) {
+        this.photoInner = document.querySelector(photoInner);
+        this.photoWrapper = document.querySelector(photoWrapper);
+        this.sliderContent = document.querySelectorAll(sliderContent);
+        this.sliderContentLength = this.sliderContent.length;
+        this.btnPrev = document.querySelector(btnPrev);
+        this.btnNext = document.querySelector(btnNext);
+        this.activeClass = activeClass;
+        this.offsetPhoto = 0;
+        this.index = 0;
+        this.photoWidth = window.getComputedStyle(this.photoWrapper).width;
+        this.photoWidth = +this.photoWidth.slice(0, this.photoWidth.length - 2);
+    }
+
+    slider() {
+        this.photoInner.style.width = 100 * this.sliderContentLength + '%';
+        this.sliderContent[this.index].classList.add(this.activeClass);
+
+        this.btnNext.addEventListener('click', () => {
+
+            if (this.index == this.sliderContentLength - 1) {
+                this.index = 0;
+                this.offsetPhoto = 0;
+            } else {
+                this.index++;
+                this.offsetPhoto += this.photoWidth;
+            }
+
+            this.photoInner.style.transform = `translateX(-${this.offsetPhoto}px)`;
+
+            this.sliderContent.forEach(item => {
+                item.classList.remove(this.activeClass);
+            });
+
+            this.sliderContent[this.index].classList.add(this.activeClass);
+
+        });
+
+        this.btnPrev.addEventListener('click', () => {
+
+            if (this.index == 0) {
+                this.index = this.sliderContentLength - 1;
+                this.offsetPhoto = this.photoWidth * (this.sliderContentLength - 1);
+            } else {
+                this.index--;
+                this.offsetPhoto -= this.photoWidth;
+            }
+
+            this.photoInner.style.transform = `translateX(-${this.offsetPhoto}px)`;
+
+            this.sliderContent.forEach(item => {
+                item.classList.remove(this.activeClass);
+            });
+
+            this.sliderContent[this.index].classList.add(this.activeClass);
+
+        });
+    }
+}
+
+// ДЛЯ ОТЗЫВА
+
+new Slider(
+        '.feedback__photo-inner',
+        '.feedback__photo-wrapper',
+        '.feedback__block-content',
+        '.feedback__button--left',
+        '.feedback__button--right',
+        'feedback__block-content--active')
     .slider();

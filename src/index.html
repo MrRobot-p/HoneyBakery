@@ -53,7 +53,7 @@
                 </button>
             </div>
             <ul class="header__menu">
-                <li class="header__menu-item"><a class="header__menu-link header__menu-link--active" href="#">Главная</a></li>
+                <li class="header__menu-item"><a class="header__menu-link header__menu-link--active" href="index.html">Главная</a></li>
                 <li class="header__menu-item"><a class="header__menu-link" href="#">Каталог</a></li>
                 <li class="header__menu-item"><a class="header__menu-link" href="#">Контакты</a></li>
                 <li class="header__menu-item"><a class="header__menu-link" href="#">О нас</a></li>
@@ -157,8 +157,8 @@
                         </a>
                     </li>
                 </ul>
-                <button class="specials__arrow specials__arrow--left button__arrow button__arrow--left"></button>
-                <button class="specials__arrow specials__arrow--right button__arrow button__arrow--right"></button>
+                <button class="specials__arrow specials__arrow--left button__arrow button__arrow--left" aria-label="Листать влево"></button>
+                <button class="specials__arrow specials__arrow--right button__arrow button__arrow--right" aria-label="Листать вправо"></button>
             </div>
         </div>
         <div class="specials__horizontal-line horizontal-line"></div>
@@ -224,11 +224,10 @@
                         </picture>
                     </div>
                     <h3 class="features__item-title title">Отборные ягоды и фрукты</h3>
-                    <p class="features__item-description description">Мы не используем покупные джемы и варенья для начинок. В них используются вредные вещества, что портят впечатления от торта.</p>
+                    <p class="features__item-description">Мы не используем покупные джемы и варенья для начинок. В них используются вредные вещества, что портят впечатления от торта.</p>
                 </li>
                 </li>
             </ul>
-            <!-- стили special__button-arrow -->
             <a class="features__button button" href="#">Подробнее
                 <span class="features__button-arrow">
                     <svg class="features__button-arrow-svg" width="6" height="13">
@@ -243,63 +242,77 @@
 
     <!-- ANSWERS -->
     <section class="answers container">
-        <div class="answers__text-content">
-            <p class="answers__subtitle subtitle">Вопрос-ответ</p>
-            <h2 class="answers__title title">Ответы на самые популярные вопросы</h2>
+        <div class="answers__content-container">
+            <div class="answers__text-content">
+                <p class="answers__subtitle subtitle">Вопрос-ответ</p>
+                <h2 class="answers__title title">Ответы на самые популярные вопросы</h2>
+            </div>
+            <ol class="answers__list">
+                <li class="answers__item active shadow">
+                    <button class="answers__question answers__question-text" type="button" aria-label="Посмотреть ответ 1">Из каких критериев складывается цена заказа?
+                        <span class="answers__button"></span>
+                    </button>
+                    <div class="answers__answer">
+                        <div class="answers__answer-wrap">
+                            <p class="answers__paragraph">Цена на десерты из ассортимента складываются в первую очередь в зависимости от сложности работы.</p>
+                            <p class="answers__paragraph">А также расходов на продукты, коммунальные и транспортные расходы, упаковки, декор, трудозатраты кондитера, расходы на рекламу и дополнительные расходы.</p>
+                            <p class="answers__paragraph">Напоминаем, что мы работаем по предоплате 50%.</p>
+
+                        </div>
+                    </div>
+                </li>
+                <li class="answers__item shadow">
+                    <button class="answers__question answers__question-text" type="button" aria-label="Посмотреть ответ 2">Как обстоят дела с доставкой?
+                    <span class="answers__button"></span>
+                </button>
+                    <div class="answers__answer">
+                        <div class="answers__answer-wrap">
+                            <p class="answers__paragraph">Доставка осуществляется по тарифам такси, либо самовывоз.</p>
+                            <p class="answers__paragraph">При транспортировке торта стоит придерживаться некоторых правил:</p>
+                            <ul class="answers__paragraph">
+                                <li>Переносить торт необходимо аккуратно, без тряски и наклонов, держать за дно коробки</li>
+                                <li>В автомобиле устанавливать коробку с тортом лучше на пол переднего сиденья, либо в багажник, тщательно закрепив от падения и сдвига</li>
+                                <li>Не допускать попадания солнечных лучей и использования печки, высокой скорости на поворотах</li>
+                                <li>По приезду незамедлительно поставить торт в холодильник.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="answers__item shadow">
+                    <button class="answers__question answers__question-text" type="button" aria-label="Посмотреть ответ 3">За сколько дней делать заказ?
+                    <span class="answers__button"></span>
+                </button>
+                    <div class="answers__answer">
+                        <div class="answers__answer-wrap">
+                            <p class="answers__paragraph">Рекомендуем не оставлять все вопросы связанные с заказом на последний день. Лучше оставлять заявку на торт как можно раньше, тогда Вы сможете детально обсудить все Ваши задумки и пожелания, согласовать время доставки или самовывоза
+                                и внести предоплату.</p>
+                            <p class="answers__paragraph"> В целом, лучше всего за 5-7 дней до планируемого события, в государственные праздничные дни заказ лучше оформлять за 10-14 дней.</p>
+                            <p class="answers__paragraph">Для заказа Вам нужно заполнить <a href="#" class="answers__form-link" aria-label="переход на форму для оформления заказа">форму</a>, после чего через 12-24 часов мы свяжемся с Вами, для уточнения всех деталей</p>
+
+                        </div>
+                    </div>
+                </li>
+                <li class="answers__item shadow">
+                    <button class="answers__question answers__question-text" type="button" aria-label="Посмотреть ответ 4">Как определить какой вес торта Вам необходим?
+                    <span class="answers__button"></span>
+                </button>
+                    <div class="answers__answer">
+                        <div class="answers__answer-wrap">
+                            <p class="answers__paragraph">Чтобы понять какой вес торта вам необходим, умножайте вес стандартной порции (200г) на количество гостей. Для деток средняя порция (150г).</p>
+                            <p class="answers__paragraph">Возможно кто-то из гостей захочет добавки или взять с собой.</p>
+                            <p class="answers__paragraph">P.s не забывайте, что эти цифры условные!</p>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            <a class="answers__button-submit button" href="#">Задать вопрос
+                <span class="answers__button-arrow">
+                    <svg class="answers__button-arrow-svg" width="6" height="13">
+                        <use xlink:href="#btn-arrow"></use>
+                    </svg>
+                </span>
+            </a>
         </div>
-        <ol class="answers__list">
-            <li class="answers__item answers__item--active">
-                <button class="answers__question answers__question-text" type="button" aria-label="Посмотреть ответ 1">Из каких критериев складывается цена заказа?
-                <span class="answers__button"></span>
-            </button>
-                <div class="answers__answer">
-                    <div class="answers__answer-wrap">
-                        <p></p>
-                        <p></p>
-                    </div>
-                </div>
-            </li>
-            <li class="answers__item">
-                <button class="answers__question answers__question-text" type="button" aria-label="Посмотреть ответ 2">Как обстоят дела с доставкой?
-                <span class="answers__button"></span>
-            </button>
-                <div class="answers__answer">
-                    <div class="answers__answer-wrap">
-                        <p></p>
-                        <p></p>
-                    </div>
-                </div>
-            </li>
-            <li class="answers__item">
-                <button class="answers__question answers__question-text" type="button" aria-label="Посмотреть ответ 3">За сколько дней делать заказ?
-                <span class="answers__button"></span>
-            </button>
-                <div class="answers__answer">
-                    <div class="answers__answer-wrap">
-                        <p></p>
-                        <p></p>
-                    </div>
-                </div>
-            </li>
-            <li class="answers__item">
-                <button class="answers__question answers__question-text" type="button" aria-label="Посмотреть ответ 4">Почему мы работаем по предоплате?
-                <span class="answers__button"></span>
-            </button>
-                <div class="answers__answer">
-                    <div class="answers__answer-wrap">
-                        <p></p>
-                        <p></p>
-                    </div>
-                </div>
-            </li>
-        </ol>
-        <a class="answers__button button" href="#">Задать вопрос
-            <span class="answers__button-arrow">
-                <svg class="answers__button-arrow-svg" width="6" height="13">
-                    <use xlink:href="#btn-arrow"></use>
-                </svg>
-            </span>
-        </a>
         <div class="features__horizontal-line horizontal-line"></div>
     </section>
 
@@ -307,62 +320,120 @@
     <!-- FEEDBACK -->
 
     <section class="feedback container">
-        <h2 class="feedback__title title">Отзывы</h2>
-        <div class="feedback__block">
-            <div class="feedback__photo-wrapper">
-                <div class="feedback__photo-inner">
-                    <picture>
-                        <source type="image/webp" media="(max-width: 767px)" srcset="img/reviews/second-girl/second-girl-mobile@1x.webp 1x, img/reviews/second-girl/second-girl-mobile@2x.webp 2x">
-                        <source type="image/webp" media="(max-width: 1365px)" srcset="img/reviews/second-girl/second-girl-tablet@1x.webp 1x, img/reviews/second-girl/second-girl-tablet@2x.webp 2x">
-                        <source type="image/webp" srcset="img/reviews/second-girl/second-girl-desktop@1x.webp 1x, img/reviews/second-girl/second-girl-desktop@2x.webp 2x">
+        <div class="feedback__wrapper">
+            <h2 class="feedback__title title">Отзывы</h2>
+            <div class="feedback__block shadow">
+                <div class="feedback__photo-wrapper">
+                    <div class="feedback__photo-inner">
+                        <picture>
+                            <source type="image/webp" media="(max-width: 767px)" srcset="img/reviews/second-girl/second-girl-mobile@1x.webp 1x, img/reviews/second-girl/second-girl-mobile@2x.webp 2x">
+                            <source type="image/webp" media="(max-width: 1365px)" srcset="img/reviews/second-girl/second-girl-tablet@1x.webp 1x, img/reviews/second-girl/second-girl-tablet@2x.webp 2x">
+                            <source type="image/webp" srcset="img/reviews/second-girl/second-girl-desktop@1x.webp 1x, img/reviews/second-girl/second-girl-desktop@2x.webp 2x">
 
-                        <source media="(max-width: 767px)" srcset="img/reviews/second-girl/second-girl-mobile@1x.png 1x, img/reviews/second-girl/second-girl-mobile@2x.png 2x">
-                        <source media="(max-width: 1365px)" srcset="img/reviews/second-girl/second-girl-tablet@1x.png 1x, img/reviews/second-girl/second-girl-tablet@2x.png 2x">
-                        <img class="feedback__photo" src="img/reviews/second-girl/second-girl-desktop@1x.png" srcset="img/reviews/second-girl/second-girl-desktop@2x.png 2x" alt="Фото Матильды Романовой" width="280" height="280">
-                    </picture>
-                    <picture>
-                        <source type="image/webp" media="(max-width: 767px)" srcset="img/reviews/men/men-mobile@1x.webp 1x, img/reviews/men/men-mobile@2x.webp 2x">
-                        <source type="image/webp" media="(max-width: 1365px)" srcset="img/reviews/men/men-tablet@1x.webp 1x, img/reviews/men/men-tablet@2x.webp 2x">
-                        <source type="image/webp" srcset="img/reviews/men/men-desktop@1x.webp 1x, img/reviews/men/men-desktop@2x.webp 2x">
+                            <source media="(max-width: 767px)" srcset="img/reviews/second-girl/second-girl-mobile@1x.png 1x, img/reviews/second-girl/second-girl-mobile@2x.png 2x">
+                            <source media="(max-width: 1365px)" srcset="img/reviews/second-girl/second-girl-tablet@1x.png 1x, img/reviews/second-girl/second-girl-tablet@2x.png 2x">
+                            <img class="feedback__photo" src="img/reviews/second-girl/second-girl-desktop@1x.png" srcset="img/reviews/second-girl/second-girl-desktop@2x.png 2x" alt="Фото Матильды Романовой" width="280" height="280">
+                        </picture>
+                        <picture>
+                            <source type="image/webp" media="(max-width: 767px)" srcset="img/reviews/men/men-mobile@1x.webp 1x, img/reviews/men/men-mobile@2x.webp 2x">
+                            <source type="image/webp" media="(max-width: 1365px)" srcset="img/reviews/men/men-tablet@1x.webp 1x, img/reviews/men/men-tablet@2x.webp 2x">
+                            <source type="image/webp" srcset="img/reviews/men/men-desktop@1x.webp 1x, img/reviews/men/men-desktop@2x.webp 2x">
 
-                        <source media="(max-width: 767px)" srcset="img/reviews/men/men-mobile@1x.png 1x, img/reviews/men/men-mobile@2x.png 2x">
-                        <source media="(max-width: 1365px)" srcset="img/reviews/men/men-tablet@1x.png 1x, img/reviews/men/men-tablet@2x.png 2x">
-                        <img class="feedback__photo" src="img/reviews/men/men-desktop@1x.png" srcset="img/reviews/men/men-desktop@2x.png 2x" alt="Фото Льва Кирпичева" width="280" height="280">
-                    </picture>
-                    <picture>
-                        <source type="image/webp" media="(max-width: 767px)" srcset="img/reviews/first-girl/girl-mobile@1x.webp 1x, img/reviews/first-girl/girl-mobile@2x.webp 2x">
-                        <source type="image/webp" media="(max-width: 1365px)" srcset="img/reviews/first-girl/girl-tablet@1x.webp 1x, img/reviews/first-girl/girl-tablet@2x.webp 2x">
-                        <source type="image/webp" srcset="img/reviews/first-girl/girl-desktop@1x.webp 1x, img/reviews/first-girl/girl-desktop@2x.webp 2x">
+                            <source media="(max-width: 767px)" srcset="img/reviews/men/men-mobile@1x.png 1x, img/reviews/men/men-mobile@2x.png 2x">
+                            <source media="(max-width: 1365px)" srcset="img/reviews/men/men-tablet@1x.png 1x, img/reviews/men/men-tablet@2x.png 2x">
+                            <img class="feedback__photo" src="img/reviews/men/men-desktop@1x.png" srcset="img/reviews/men/men-desktop@2x.png 2x" alt="Фото Льва Кирпичева" width="280" height="280">
+                        </picture>
+                        <picture>
+                            <source type="image/webp" media="(max-width: 767px)" srcset="img/reviews/first-girl/girl-mobile@1x.webp 1x, img/reviews/first-girl/girl-mobile@2x.webp 2x">
+                            <source type="image/webp" media="(max-width: 1365px)" srcset="img/reviews/first-girl/girl-tablet@1x.webp 1x, img/reviews/first-girl/girl-tablet@2x.webp 2x">
+                            <source type="image/webp" srcset="img/reviews/first-girl/girl-desktop@1x.webp 1x, img/reviews/first-girl/girl-desktop@2x.webp 2x">
 
-                        <source media="(max-width: 767px)" srcset="img/reviews/first-girl/girl-mobile@1x.png 1x, img/reviews/first-girl/girl-mobile@2x.png 2x">
-                        <source media="(max-width: 1365px)" srcset="img/reviews/first-girl/girl-tablet@1x.png 1x, img/reviews/first-girl/girl-tablet@2x.png 2x">
-                        <img class="feedback__photo" src="img/reviews/first-girl/girl-desktop@1x.png" srcset="img/reviews/first-girl/girl-desktop@2x.png 2x" alt="Фото Анастасии Грачевой" width="280" height="280">
-                    </picture>
+                            <source media="(max-width: 767px)" srcset="img/reviews/first-girl/girl-mobile@1x.png 1x, img/reviews/first-girl/girl-mobile@2x.png 2x">
+                            <source media="(max-width: 1365px)" srcset="img/reviews/first-girl/girl-tablet@1x.png 1x, img/reviews/first-girl/girl-tablet@2x.png 2x">
+                            <img class="feedback__photo" src="img/reviews/first-girl/girl-desktop@1x.png" srcset="img/reviews/first-girl/girl-desktop@2x.png 2x" alt="Фото Анастасии Грачевой" width="280" height="280">
+                        </picture>
+                    </div>
                 </div>
-            </div>
-            <div class="feedback__block-content feedback__block-content--active">
-                <h3 class="feedback__name">Матильда Романова</h3>
-                <p class="feedback__describe">Заказывала медовик и три шоколадки. Заказ пришел вовремя, всё было очень вкусным и невероятно красивым. Буду заказывать на каждый праздник только у Вас!</p>
-                <div class="feedback__down">
-                    <div class="feedback__horizontal-line horizontal-line"></div>
-                    <ul class="feedback__social">
-                        <li class="feedback__social-item">
-                            <a class="feedback__item-decorated" href="#" aria-label="Мы в Вконтакте"></a>
-                        </li>
-                        <li class="feedback__social-item">
-                            <a class="feedback__item-decorated" href="#" aria-label="Мы в Телеграм"></a>
-                        </li>
-                        <li class="feedback__social-item">
-                            <a class="feedback__item-decorated" href="#" aria-label="Мы в Инстаграм"></a>
-                        </li>
-                    </ul>
+                <div class="feedback__block-content feedback__block-content--active">
+                    <h3 class="feedback__name">Матильда Романова</h3>
+                    <p class="feedback__describe">Заказывала медовик и три шоколадки. Заказ пришел вовремя, всё было очень вкусным и невероятно красивым. Буду заказывать на каждый праздник только у Вас!</p>
+                    <div class="feedback__down">
+                        <div class="feedback__horizontal-line horizontal-line"></div>
+                        <ul class="feedback__social">
+                            <li class="feedback__social-item">
+                                <a class="feedback__link feedback__link--vk" href="#" aria-label="Мы в Вконтакте"></a>
+                            </li>
+                            <li class="feedback__social-item">
+                                <a class="feedback__link feedback__link--tl" href="#" aria-label="Мы в Телеграм"></a>
+                            </li>
+                            <li class="feedback__social-item">
+                                <a class="feedback__link feedback__link--in" href="#" aria-label="Мы в Инстаграм"></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+                <div class="feedback__block-content">
+                    <h3 class="feedback__name">Лев Кирпечев</h3>
+                    <p class="feedback__describe">Здравствуйте, уже попробовали Ваши конфеты. Спасибо вам большое! Первое впечатление, как камни в ювелирном магазине. А на вкус просто бомба, очень вкусные. Девушке безумно понравился такой подарочек, спасибо ещё раз!</p>
+                    <div class="feedback__down">
+                        <div class="feedback__horizontal-line horizontal-line"></div>
+                        <ul class="feedback__social">
+                            <li class="feedback__social-item">
+                                <a class="feedback__link feedback__link--vk" href="#" aria-label="Мы в Вконтакте"></a>
+                            </li>
+                            <li class="feedback__social-item">
+                                <a class="feedback__link feedback__link--tl" href="#" aria-label="Мы в Телеграм"></a>
+                            </li>
+                            <li class="feedback__social-item">
+                                <a class="feedback__link feedback__link--in" href="#" aria-label="Мы в Инстаграм"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="feedback__block-content">
+                    <h3 class="feedback__name">Анастасия Грачева</h3>
+                    <p class="feedback__describe">От вкуса до оформления прямо эстетическое удовольствие! Одна конфетка, краше другой, а шоколадка вообще выглядит фантастически. Огромная Вам благодарность!</p>
+                    <div class="feedback__down">
+                        <div class="feedback__horizontal-line horizontal-line"></div>
+                        <ul class="feedback__social">
+                            <li class="feedback__social-item">
+                                <a class="feedback__link feedback__link--vk" href="#" aria-label="Мы в Вконтакте"></a>
+                            </li>
+                            <li class="feedback__social-item">
+                                <a class="feedback__link feedback__link--tl" href="#" aria-label="Мы в Телеграм"></a>
+                            </li>
+                            <li class="feedback__social-item">
+                                <a class="feedback__link feedback__link--in" href="#" aria-label="Мы в Инстаграм"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button type="button" class="feedback__button feedback__button--left button__arrow button__arrow--left" aria-label="Листать влево"></button>
+                <button type="button" class="feedback__button feedback__button--right button__arrow button__arrow--right" aria-label="Листать вправо"></button>
             </div>
         </div>
     </section>
-    <footer class="footer">
-        <div class="footer__wrapper">
 
+
+    <!-- FOOTER -->
+
+    <footer class="footer container">
+        <div class="footer__wrapper">
+            <ul class="footer__text-content">
+                <li class="footer__item"><img class="footer__item-img" src="img/logo/LogoText-light.png" alt="Название компании" width="232.66" height="35.33"></li>
+                <li class="footer__item">
+                    <div class="footer__horizontal-line horizontal-line"></div>
+                </li>
+                <li class="footer__item"><a class="footer__link" href="https://yandex.by/maps/-/CCUu52SVLD">Гродно, пр-т Космонавтов, 37Б</a></li>
+                <li class="footer__item"><a class="footer__link" href="tel:+375336890899">+375(33)68-90-899</a></li>
+                <li class="footer__item"><a class="footer__link" href="mailto:youwaytosuccess@gmail.com">youwaytosuccess@gmail.com</a></li>
+            </ul>
+            <div class="footer__vertical-line"></div>
+            <div class="footer__horizontal-line--mobile"></div>
+            <a class="footer__logotype" href="#"><img class="footer__logotype-img" src="img/logo/logo.png" alt="Логотип компании" width="190" height="190"></a>
+            <div class="footer__horizontal-line--mobile"></div>
+            <div class="footer__vertical-line"></div>
+            <a class="footer__map" href="https://yandex.by/maps/-/CCUu52SVLD"><img class="footer__map-img" src="img/map.png" alt="Карта мира с точкой на городе Гродно" width="380" height="184"></a>
         </div>
     </footer>
 

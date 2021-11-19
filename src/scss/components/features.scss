@@ -11,14 +11,14 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 992px;
+    max-width: 992px;
     margin: 0 auto 80px auto;
     @media (max-width: 1365px) {
-        width: 660px;
+        max-width: 660px;
         margin: 0px auto 50px auto;
     }
     @media (max-width: 767px) {
-        width: 290px;
+        max-width: 290px;
         margin: 0px auto 50px auto;
     }
 }
@@ -191,4 +191,11 @@
 
 .features__horizontal-line {
     margin: 0 auto;
+}
+
+.features__button-arrow-svg {
+    @media (max-width: 1365px) {
+        width: 4px;
+        height: 9px;
+    }
 }
