@@ -18,7 +18,6 @@
             <symbol id="btn-arrow" viewBox="0 0 6 16">
                 <path d="M1.1417 0L0 1.06417L3.7085 8.0013L0 14.9384L1.1417 16L6 8.0013L1.1417 0Z" fill="#333333"/>
                 </symbol>
-                >
             <symbol id="burger" viewBox="0 0 17 12">
                 <path d="M7.25806 12H16.6667V10H7.25806V12ZM0 7H16.6667V5H0V7ZM3.76344 0V2H16.6667V0H3.76344Z" fill="#1F1F1F"/>
             </symbol>
@@ -225,7 +224,6 @@
                     </div>
                     <h3 class="features__item-title title">Отборные ягоды и фрукты</h3>
                     <p class="features__item-description">Мы не используем покупные джемы и варенья для начинок. В них используются вредные вещества, что портят впечатления от торта.</p>
-                </li>
                 </li>
             </ul>
             <a class="features__button button" href="#">Подробнее
@@ -437,7 +435,47 @@
         </div>
     </footer>
 
+    <section class="popup">
+        <div class="popup__wrapper">
+            <h1 class="popup__title">Оформление заказа</h1>
+            <form class="popup__request" action="https://echo.htmlacademy.ru" method="post">
+                <div class="popup__request-container">
+                    <div class="popup__user-data">
+                        <p class="popup__user-name">
+                            <label for="user-name">Как к вам обращаться?<span class="popup__star">*</span></label>
+                            <input type="text" name="name" id="user-name" required>
+                        </p>
+                        <div class="popup__user-contacts">
+                            <p class="popup__user-number">
+                                <label for="user-number">Ваш номер телефона<span class="popup__star">*</span></label>
+                                <input type="tel" name="number" id="user-number" required>
+                            </p>
+                            <p class="popup__user-email">
+                                <label for="user-email">Ваш e-mail<span class="popup__star">*</span></label>
+                                <input type="email" name="email" id="user-email" required>
+                            </p>
+                        </div>
+                        <p class="popup__user-commit">
+                            <label for="user-commit">Ваш комментарий к заказу</label>
+                            <textarea name="commit" id="user-commit"></textarea>
+                        </p>
+                    </div>
+                    <div class="popup__control">
+                        <button class="popup__button-submit button" type="submit">Отправить
+                                <span class="popup__button-arrow">
+                                    <svg class="popup__button-arrow-svg" width="6" height="13">
+                                        <use xlink:href="#btn-arrow"></use>
+                                    </svg>
+                                </span>
+                            </button>
+                    </div>
 
+                </div>
+            </form>
+            <button class="popup__close-button" type="button" aria-label="Закрыть"></button>
+            <p class="popup__description">Нажимая на кнопку “отправить” вы даёте своё согласие на обработку персональных данных</p>
+        </div>
+    </section>
     <div class="overlay"></div>
 </body>
 
